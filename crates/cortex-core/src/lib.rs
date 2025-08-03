@@ -3,12 +3,14 @@
 
 //! Core components of the Cortex cache.
 
-mod shard;
-mod slab;
 mod entry;
 mod index;
+mod shard;
+mod handle;
+mod slab;
 
-pub use shard::Shard;
-pub use slab::Slab;
 pub use entry::Entry;
 pub use index::Index;
+pub use shard::Shard;
+pub use slab::Slab;
+pub(crate) use handle::Handle;
